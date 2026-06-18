@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Wars (how to avoid) — Partner Package</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1713;--ink-muted:#5a5448;--ink-faint:#9a9186;
+  --paper:#f8f5ef;--paper-warm:#f3ede2;--rule:#d8d0c4;
+  --accent:#01696f;--accent-light:#e6efee;
+  --font-serif:'Instrument Serif',Georgia,serif;
+  --font-sans:'Work Sans','Helvetica Neue',sans-serif;
+}
+@media screen{html{background:#cbc5bb;min-height:100vh;padding:2rem}body{max-width:816px;margin-inline:auto;background:var(--paper);box-shadow:0 4px 40px rgba(0,0,0,0.25)}.print-note{display:block;text-align:center;font-family:var(--font-sans);font-size:0.8rem;color:#6b6055;padding:0.75rem;border-bottom:1px solid var(--rule);background:var(--paper-warm);letter-spacing:0.06em;text-transform:uppercase}.print-btn{background:var(--accent);color:#fff;border:none;padding:0.5rem 1.25rem;border-radius:4px;font-family:var(--font-sans);font-size:0.8rem;font-weight:600;cursor:pointer;letter-spacing:0.06em;text-transform:uppercase;margin-left:1rem}.print-btn:hover{background:#0c4e54}}
+@media print{.print-note{display:none!important}html,body{background:#fff;margin:0;padding:0;max-width:none;box-shadow:none}.page{page-break-after:always;break-after:page}.no-break{page-break-inside:avoid;break-inside:avoid}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);font-size:10.5pt;line-height:1.6;color:var(--ink);background:var(--paper)}
+h1,h2,h3,h4{font-family:var(--font-serif);line-height:1.15;text-wrap:balance}
+p{text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+.page{width:816px;min-height:1056px;padding:64px 72px;position:relative;background:var(--paper);overflow:hidden}
+.cover-page{background:#1a1713;color:#f0ebe0;display:flex;flex-direction:column;justify-content:flex-end;padding:0;position:relative;min-height:1056px}
+.cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55}
+.cover-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,16,12,0.9) 100%)}
+.cover-content{position:relative;z-index:2;padding:64px 72px}
+.cover-eyebrow{font-family:var(--font-sans);font-size:7.5pt;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.cover-title{font-family:var(--font-serif);font-size:52pt;font-style:italic;line-height:1.0;color:#f0ebe0;margin-bottom:1.25rem}
+.cover-title span{text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:3px}
+.cover-sub{font-size:11pt;color:#b0a898;max-width:38em;line-height:1.6;margin-bottom:2rem}
+.cover-meta{font-family:var(--font-sans);font-size:7pt;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#7a7268;border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem}
+.cover-badge{display:inline-block;border:1px solid rgba(255,255,255,0.15);padding:4px 10px;border-radius:3px;font-size:7pt;letter-spacing:0.12em;text-transform:uppercase;color:#b0a898;margin-right:1rem}
+.page-header{border-bottom:2px solid var(--ink);padding-bottom:10pt;margin-bottom:24pt;display:flex;align-items:baseline;justify-content:space-between}
+.page-header-title{font-family:var(--font-serif);font-size:10pt;font-style:italic;color:var(--ink-muted)}
+.page-header-num{font-size:7.5pt;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32pt;align-items:start}
+.label{font-family:var(--font-sans);font-size:6.5pt;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6pt;display:block}
+.section-heading{font-family:var(--font-serif);font-size:15pt;font-style:italic;line-height:1.2;margin-bottom:10pt}
+.display-heading{font-family:var(--font-serif);font-size:26pt;font-style:italic;line-height:1.1;margin-bottom:14pt}
+.body{font-size:9.5pt;line-height:1.65;color:var(--ink-muted);margin-bottom:10pt}
+.body-dark{font-size:9.5pt;line-height:1.65;color:var(--ink);margin-bottom:10pt}
+.lead{font-size:11pt;line-height:1.55;color:var(--ink);margin-bottom:14pt;max-width:46em}
+.rule{border:none;border-top:1px solid var(--rule);margin:16pt 0}
+.inline-img{border-radius:4px;overflow:hidden;margin-bottom:12pt}
+.inline-img img{width:100%;height:200pt;object-fit:cover}
+.caption{font-size:7pt;color:var(--ink-faint);letter-spacing:0.06em;margin-top:4pt;font-style:italic}
+.pull-quote{border-left:3px solid var(--accent);padding-left:14pt;margin:16pt 0}
+.pull-quote-text{font-family:var(--font-serif);font-size:13pt;font-style:italic;line-height:1.4;color:var(--ink)}
+.pull-quote-attr{font-size:7pt;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:5pt}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16pt;margin:16pt 0}
+.quote-item{border-top:2px solid var(--accent);padding-top:10pt}
+.quote-item-text{font-family:var(--font-serif);font-size:10pt;font-style:italic;line-height:1.45;color:var(--ink);margin-bottom:7pt}
+.quote-item-attr{font-size:6.5pt;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint)}
+.dark-page{background:var(--ink);color:#f0ebe0}
+.dark-page .label{color:var(--accent)}
+.dark-page .body{color:#a09488}
+.dark-page .rule{border-color:rgba(255,255,255,0.1)}
+.dark-page .page-header{border-color:rgba(255,255,255,0.2)}
+.dark-page .page-header-title{color:#a09488}
+.dark-page .page-header-num{color:#6a6460}
+.stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20pt;margin:20pt 0;border:1px solid rgba(255,255,255,0.1);border-radius:4px;padding:20pt}
+.stat-box{text-align:center}
+.stat-num{font-family:var(--font-serif);font-size:28pt;color:#f0ebe0;display:block;line-height:1;margin-bottom:4pt}
+.stat-lbl{font-size:6.5pt;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#7a7268;line-height:1.4}
+.roi-block{border-left:3px solid var(--accent);padding:14pt 16pt;margin:18pt 0;background:rgba(255,255,255,0.04)}
+.roi-text{font-family:var(--font-serif);font-size:16pt;font-style:italic;color:#f0ebe0;line-height:1.35}
+.timeline-item{display:grid;grid-template-columns:80pt 1fr;gap:16pt;padding:12pt 0;border-bottom:1px solid var(--rule)}
+.timeline-item:last-child{border-bottom:none}
+.t-date{font-size:7pt;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);padding-top:2pt;line-height:1.4}
+.t-title{font-family:var(--font-serif);font-size:11pt;font-style:italic;margin-bottom:4pt;color:var(--ink)}
+.t-body{font-size:8.5pt;color:var(--ink-muted);line-height:1.55}
+.scarcity-box{background:var(--accent-light);border:1px solid rgba(1,105,111,0.2);border-radius:4px;padding:16pt;margin:14pt 0}
+.scarcity-box p{font-size:9pt;line-height:1.6;color:var(--ink);margin:0}
+.scarcity-box strong{color:var(--accent)}
+.budget-table{width:100%;border-collapse:collapse;margin:12pt 0}
+.budget-table th{font-size:6.5pt;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);padding:6pt 8pt;border-bottom:2px solid var(--ink);text-align:left}
+.budget-table th:last-child,.budget-table td:last-child{text-align:right}
+.budget-table td{font-size:8.5pt;padding:6pt 8pt;border-bottom:1px solid var(--rule);color:var(--ink-muted);vertical-align:top}
+.budget-table .category td{font-weight:700;font-family:var(--font-serif);font-style:italic;font-size:9.5pt;color:var(--ink);background:var(--paper-warm);padding:8pt}
+.budget-table .total-row td{font-weight:700;font-size:9.5pt;color:var(--ink);border-top:2px solid var(--ink);padding-top:10pt}
+.budget-note{font-size:7.5pt;color:var(--ink-faint);font-style:italic;line-height:1.55}
+.giving-row{display:grid;grid-template-columns:80pt 1fr;gap:14pt;padding:10pt 0;border-bottom:1px solid var(--rule)}
+.giving-row:last-child{border-bottom:none}
+.g-amount{font-family:var(--font-serif);font-size:12pt;color:var(--accent);line-height:1.2}
+.g-title{font-size:9pt;font-weight:600;color:var(--ink);margin-bottom:3pt}
+.g-desc{font-size:8pt;color:var(--ink-muted);line-height:1.5}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:16pt;margin-top:12pt}
+.team-member{border-top:2px solid var(--rule);padding-top:10pt}
+.tm-name{font-family:var(--font-serif);font-size:11pt;font-style:italic;margin-bottom:2pt}
+.tm-role{font-size:6.5pt;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6pt}
+.tm-bio{font-size:8pt;color:var(--ink-muted);line-height:1.55}
+.closing-page{background:var(--paper-warm)}
+.closing-large{font-family:var(--font-serif);font-size:34pt;font-style:italic;line-height:1.1;color:var(--ink);max-width:22em;margin-bottom:24pt}
+.closing-large span{text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:3px}
+.contact-block{border-top:1px solid var(--rule);padding-top:14pt;display:grid;grid-template-columns:1fr 1fr;gap:24pt}
+.contact-label{font-size:6.5pt;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:5pt;display:block}
+.contact-val{font-size:9.5pt;color:var(--ink)}
+.contact-sub{font-size:8pt;color:var(--ink-muted);margin-top:3pt;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="print-note">Print-ready partner package &nbsp;|&nbsp; <button class="print-btn" onclick="window.print()">Print / Save PDF</button></div>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover-page no-break">
+  <img class="cover-img" src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/95a7e6ed-0d01-40c1-9536-2a5bc474cf09.png" alt="" width="816" height="1056" loading="eager">
+  <div class="cover-overlay"></div>
+  <div class="cover-content">
+    <p class="cover-eyebrow">Nooksack Watershed &mdash; Whatcom County, Washington</p>
+    <h1 class="cover-title"><span>Water Wars</span><br>(how to avoid)</h1>
+    <p class="cover-sub">Building the conditions for a shared future through story, relationship, and the slow work of trust.</p>
+    <div><span class="cover-badge">Partner Overview</span><span class="cover-badge">June 2026</span></div>
+    <p style="height:14pt"></p>
+    <p class="cover-meta">Fiscally sponsored by Whatcom Community Foundation &nbsp;&middot;&nbsp; waterwars.info</p>
+  </div>
+</div>
+
+<!-- PAGE 2: THE PROJECT -->
+<div class="page no-break">
+  <div class="page-header"><span class="page-header-title">Water Wars (how to avoid)</span><span class="page-header-num">The Project</span></div>
+  <div class="two-col">
+    <div>
+      <span class="label">How it begins</span>
+      <h2 class="section-heading">A meal. And then another.</h2>
+      <p class="body-dark">Tribal fishers brought salmon. Farmers brought potatoes and berries. A Lummi leader shared his lineage back to the 1855 treaty. A fourth-generation farmer said it was the first time he had ever sat down to eat with a tribal member. By the end of the evening, something had shifted. Not solved. Not fixed. Opened.</p>
+      <p class="body">That opening is the work. Plans do not create moments like that. Policies do not either. People do, when someone takes the time to bring them together and keep showing up.</p>
+      <div class="pull-quote">
+        <p class="pull-quote-text">"The root of most of our problems are relational."</p>
+        <p class="pull-quote-attr">Rich Appel &mdash; Independent dairy farmer</p>
+      </div>
+    </div>
+    <div>
+      <div class="inline-img">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/9a86658b-2043-4013-b3cb-e478550086f6.png" alt="Shared meal on the Nooksack River" width="320" height="200" loading="lazy">
+        <p class="caption">Common Waters Gathering &mdash; Nooksack River</p>
+      </div>
+      <p class="body">Since 2023, the project has brought together more than 150 Lummi and Nooksack tribal members, Punjabi and multigenerational Anglo farmers, civic leaders, and neighbors from across Whatcom County &mdash; from the river's headwaters to its delta on Lummi lands.</p>
+    </div>
+  </div>
+  <hr class="rule">
+  <span class="label">What the project is</span>
+  <p class="lead">Water Wars (how to avoid) is a storytelling and relationship-building project cultivating the conditions for a shared future in the Nooksack River and adjacent watersheds.</p>
+  <div class="two-col">
+    <div>
+      <p class="body">Food from this region is part of every gathering. Salmon, clams, and crab from the delta. Potatoes, skyr, and berries from Whatcom farms. Cooking and eating together is not a perk &mdash; it is a practice.</p>
+      <p class="body">The work is documented through film, photography, visual art, and articles. Eight short films are complete or in production. A portrait series by Bellingham artist Christopher Remmers is growing. A Western Washington University StoryMap lets anyone stand virtually at five points along the river and simply listen.</p>
+    </div>
+    <div>
+      <p class="body">These are not feel-good convenings. They are strategic investments in the relational infrastructure that any durable future for this watershed requires &mdash; the kind that no technical plan, by itself, can provide.</p>
+      <p class="body">Informed by Otto Scharmer's framework for building social soil and enabling emergent futures, the initiative works from the premise that lasting change requires cultivating the conditions for trust before the seeds of any institutional agreement can take root.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: VOICES + WHY NOW -->
+<div class="page no-break">
+  <div class="page-header"><span class="page-header-title">Water Wars (how to avoid)</span><span class="page-header-num">Voices &amp; Context</span></div>
+  <span class="label">In their own words</span>
+  <div class="quote-grid">
+    <div class="quote-item">
+      <p class="quote-item-text">"This is not my land. This is your land. And I believe we are now stewards, together."</p>
+      <p class="quote-item-attr">Brad Rader &mdash; Fourth-generation berry farmer</p>
+    </div>
+    <div class="quote-item">
+      <p class="quote-item-text">"Three years ago, I said no. But I kept showing up. Over time I began to see that many of these people genuinely wanted to learn. Wanted relationship."</p>
+      <p class="quote-item-attr">Free Borsey &mdash; Lummi fisherman and community organizer</p>
+    </div>
+    <div class="quote-item">
+      <p class="quote-item-text">"We are not enemies."</p>
+      <p class="quote-item-attr">Jay Julius &mdash; Lummi Nation</p>
+    </div>
+  </div>
+  <hr class="rule">
+  <div class="two-col">
+    <div>
+      <span class="label">Why this matters now</span>
+      <h2 class="section-heading">The window is open. Briefly.</h2>
+      <p class="body-dark">This summer, Washington state agencies are convening roundtables on chronic water stress. This project has been invited to help design, convene, and facilitate one of the Washington's Water Future roundtables &mdash; a moment that requires community trust to already be in the room.</p>
+      <p class="body">The lesson from other watersheds is plain: legal and technical frameworks can ratify agreements. They cannot produce the relationships that make agreements hold. Trust has to come first.</p>
+    </div>
+    <div>
+      <span class="label">When relationship-building fails</span>
+      <p class="body">The Colorado River was divided for over a century with almost no meaningful cross-sector relationship-building. By the time the water ran short, there was no shared trust to draw on.</p>
+      <p class="body">The Yakima basin spent decades in expensive litigation before the coalition needed for a coordinated plan began to form. Farmers lost security. Tribes lost fish. Communities paid a price they could not recover. The Nooksack does not have to follow that path.</p>
+      <p class="body">This work is also about shifting from a scarcity frame &mdash; who gets what water &mdash; to an abundance frame: what becomes possible when the right people are in long-term relationship with each other and with the river.</p>
+    </div>
+  </div>
+  <hr class="rule">
+  <div class="two-col">
+    <div>
+      <div class="inline-img">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/a59785b2-30b6-4125-acd0-a9557692ab79.png" alt="Lummi elder on the Nooksack River" width="300" height="180" loading="lazy">
+        <p class="caption">Lummi Nation &mdash; 1855 treaty, delta stewardship, fishing rights</p>
+      </div>
+    </div>
+    <div>
+      <div class="inline-img">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/927352b4-6894-4aa8-a739-f71975ff9989.png" alt="Fourth-generation Whatcom County farmer" width="300" height="180" loading="lazy">
+        <p class="caption">Whatcom County farming &mdash; four generations, floodplain stewardship</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: INVESTMENT CASE (dark) -->
+<div class="page dark-page no-break">
+  <div class="page-header"><span class="page-header-title">Water Wars (how to avoid)</span><span class="page-header-num">Investment Case</span></div>
+  <span class="label">The investment case</span>
+  <h2 class="display-heading" style="color:#f0ebe0">What $5M can unlock</h2>
+  <p style="font-size:10.5pt;color:#a09488;max-width:52em;line-height:1.6;margin-bottom:18pt">After years of facilitated relationship-building, the Yakima basin produced something no courtroom could: a unified coalition with a shared vision that opened the door to a multi-decade integrated plan and hundreds of millions in federal and state investment. Policymakers consistently say yes to coalitions of tribes and farmers arriving together. The rare thing is the relational work required to make that coalition possible.</p>
+  <div class="stat-row">
+    <div class="stat-box"><span class="stat-num">$800M+</span><p class="stat-lbl">Federal &amp; state investment in Yakima over 20+ years</p></div>
+    <div class="stat-box"><span class="stat-num">$5M</span><p class="stat-lbl">Raised over 18 months to build the Nooksack coalition and co-create its long-term plan</p></div>
+    <div class="stat-box"><span class="stat-num">80&ndash;100x</span><p class="stat-lbl">Conservative projected downstream return on the relational investment</p></div>
+  </div>
+  <div class="roi-block">
+    <p class="roi-text">The $5M raised today is the seed capital for<br>a 170-year integrated watershed plan &mdash;<br>and the relationships required to make it real.</p>
+  </div>
+  <hr class="rule">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24pt">
+    <div>
+      <span class="label">How we use the money</span>
+      <p style="font-size:9pt;color:#a09488;line-height:1.6;margin-bottom:8pt"><strong style="color:#f0ebe0">Deep circles.</strong> Intimate retreats, hosted dinners, and river walks for the 20&ndash;30 key leaders whose relationships are the keystone of everything else.</p>
+      <p style="font-size:9pt;color:#a09488;line-height:1.6;margin-bottom:8pt"><strong style="color:#f0ebe0">Broad engagement.</strong> Facilitated film and art experiences across Whatcom County &mdash; in theaters, grange halls, libraries, and schools &mdash; gathering voices for a community-wide visioning process.</p>
+      <p style="font-size:9pt;color:#a09488;line-height:1.6"><strong style="color:#f0ebe0">The story itself.</strong> Film, photography, visual art, and spoken word &mdash; captured and reflected back to the community. Story is not decoration here. It is the infrastructure.</p>
+    </div>
+    <div>
+      <span class="label">What it unlocks beyond water</span>
+      <p style="font-size:9pt;color:#a09488;line-height:1.6;margin-bottom:10pt">The same social soil that makes a watershed agreement more durable also makes a community more resilient to economic disruption, ecological crisis, and the broader erosion of institutional trust.</p>
+      <p style="font-size:9pt;color:#a09488;line-height:1.6;margin-bottom:10pt">Place-based relationship work of this kind is chronically underfunded precisely because its value radiates in every direction at once. Water is the organizing issue. The relationships are the asset.</p>
+      <p style="font-size:9pt;color:#a09488;line-height:1.6">The $52,000 invested in film production to date has already produced work with an estimated market value of $125,000. Year over year, this project has generated roughly $2 of impact for every $1 invested.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5: NEXT PHASE -->
+<div class="page no-break">
+  <div class="page-header"><span class="page-header-title">Water Wars (how to avoid)</span><span class="page-header-num">The Next Phase</span></div>
+  <span class="label">The next 18 months</span>
+  <p class="lead">Picture eighteen months from now. A Lummi fisher, a local dairy producer, a civic leader, and a land steward arrive in Washington DC together, carrying a 170-year collective vision for the Nooksack and the credibility to turn it into resources. That is the destination. Here is the path.</p>
+  <div class="scarcity-box">
+    <p>This work is about the shift from <strong>scarcity to abundance</strong> &mdash; not a better legal mechanism for dividing a shrinking resource, but the relationships and shared vision required to grow something larger together. The DC trip is not symbolic. It is a fundraising mission &mdash; and policymakers say yes to coalitions like this one.</p>
+  </div>
+  <div style="margin-top:14pt">
+    <div class="timeline-item">
+      <p class="t-date">Aug&ndash;Sep 2026</p>
+      <div><p class="t-title">Washington's Water Future roundtable</p><p class="t-body">The project helps design, convene, and facilitate a WA Department of Ecology roundtable &mdash; arriving with the beginnings of a coalition and signed shared intent among tribal, agricultural, and civic leaders.</p></div>
+    </div>
+    <div class="timeline-item">
+      <p class="t-date">Oct&ndash;Dec 2026</p>
+      <div><p class="t-title">Satellite screening campaign &mdash; 6 venues across Whatcom County</p><p class="t-body">Facilitated film experiences in theaters, grange halls, libraries, school auditoriums, and museums serving as live participation channels for community visioning, alongside a targeted online campaign.</p></div>
+    </div>
+    <div class="timeline-item">
+      <p class="t-date">Nov 19, 2026</p>
+      <div><p class="t-title">Flagship Screening + Immersive Experience</p><p class="t-body">Full production event featuring <em>We Are Not Enemies</em>, portrait paintings by Christopher Remmers, projected river footage, soundscapes, and facilitated community visioning. Ticketed, documented, archived.</p></div>
+    </div>
+    <div class="timeline-item">
+      <p class="t-date">Late 2026</p>
+      <div><p class="t-title">Entity formation (pending H2 fundraising)</p><p class="t-body">Transition from fiscal sponsorship at Whatcom Community Foundation to an independent entity, building institutional standing ahead of the DC trip.</p></div>
+    </div>
+    <div class="timeline-item">
+      <p class="t-date">Q3 2027</p>
+      <div><p class="t-title">Washington DC &mdash; coalition trip and federal funding campaign</p><p class="t-body">A Lummi fisher, a dairy farmer, a civic leader, and a land steward arrive in DC together, bearing a long-term collective vision for the Nooksack's longevity and ready to raise at least $600M to resource the integrated plan over the coming decade.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6: BUDGET -->
+<div class="page no-break">
+  <div class="page-header"><span class="page-header-title">Water Wars (how to avoid)</span><span class="page-header-num">Budget &mdash; 2026</span></div>
+  <span class="label">2026 operating plan</span>
+  <p class="lead" style="font-size:10pt;margin-bottom:18pt">Target: raise <strong>$700,000 in 2026</strong>, moving toward an annual operating budget of approximately <strong>$1,000,000</strong>. The $5M total raise extends over 18 months (H2 2026 through end of 2027), with a $3.5M federal and foundation campaign beginning in Q1 2027.</p>
+  <table class="budget-table">
+    <thead><tr><th style="width:50%">Line Item</th><th style="width:25%">H1 2026 (actual/est.)</th><th style="width:25%">H2 2026 (projected)</th></tr></thead>
+    <tbody>
+      <tr class="category"><td colspan="3">Personnel &amp; Operations</td></tr>
+      <tr><td>Core team compensation (4 people)</td><td>$30,000</td><td>$100,000</td></tr>
+      <tr><td>Fiscal sponsor fee (Whatcom Community Foundation, 8%)</td><td>$2,800</td><td>$11,200</td></tr>
+      <tr><td>Administrative &amp; financial</td><td>$3,000</td><td>$6,000</td></tr>
+      <tr class="category"><td colspan="3">Gatherings &amp; Community Engagement</td></tr>
+      <tr><td>Common Waters gatherings (food, venue, logistics, transport)</td><td>$18,000</td><td>$45,000</td></tr>
+      <tr><td>Leadership dinners and intimate circles (4&ndash;6 per half)</td><td>$8,000</td><td>$20,000</td></tr>
+      <tr><td>Yakima basin field trip &mdash; coalition delegation</td><td>&mdash;</td><td>$12,000</td></tr>
+      <tr><td>WA Dept of Ecology roundtable facilitation and convening</td><td>&mdash;</td><td>$18,000</td></tr>
+      <tr class="category"><td colspan="3">Film, Art &amp; Storytelling</td></tr>
+      <tr><td><em>We Are Not Enemies</em> &mdash; 25&ndash;30 min documentary</td><td>$14,000</td><td>$100,000</td></tr>
+      <tr><td>Short film vignettes (2 remaining + 4 new)</td><td>$12,000</td><td>$36,000</td></tr>
+      <tr><td>Portrait painting series &mdash; Christopher Remmers (5 new works)</td><td>&mdash;</td><td>$15,000</td></tr>
+      <tr><td>Writing, newsletters, and digital content</td><td>$4,000</td><td>$12,000</td></tr>
+      <tr class="category"><td colspan="3">Public Engagement &amp; Screenings</td></tr>
+      <tr><td>Flagship screening + immersive experience (Nov 19)</td><td>&mdash;</td><td>$65,000</td></tr>
+      <tr><td>Satellite screenings &mdash; 6 venues across Whatcom County</td><td>&mdash;</td><td>$30,000</td></tr>
+      <tr><td>Digital campaign and online community visioning</td><td>&mdash;</td><td>$15,000</td></tr>
+      <tr class="category"><td colspan="3">Infrastructure &amp; Development</td></tr>
+      <tr><td>Website and StoryMap maintenance</td><td>$3,000</td><td>$6,000</td></tr>
+      <tr><td>Entity formation (legal, filing, transition from fiscal sponsor)</td><td>&mdash;</td><td>$8,000</td></tr>
+      <tr><td>Fundraising travel and partnership development</td><td>$4,000</td><td>$12,000</td></tr>
+      <tr class="total-row"><td><strong>Total</strong></td><td><strong>~$98,800</strong></td><td><strong>~$511,200</strong></td></tr>
+    </tbody>
+  </table>
+  <p class="budget-note" style="margin-top:8pt">All figures are estimates pending confirmed partnerships. H1 2026 actual spend being reconciled by Whatcom Community Foundation. H2 assumes total 2026 raise of $700K. Fiscal sponsor fee calculated on gross receipts.</p>
+</div>
+
+<!-- PAGE 7: GIVING LEVELS + TEAM -->
+<div class="page no-break">
+  <div class="page-header"><span class="page-header-title">Water Wars (how to avoid)</span><span class="page-header-num">Partnership Levels &amp; Team</span></div>
+  <div class="two-col">
+    <div>
+      <span class="label">What your support makes possible</span>
+      <div class="giving-row"><div><p class="g-amount">$25,000</p></div><div><p class="g-title">One satellite screening</p><p class="g-desc">Fully produced and documented &mdash; venue, AV, facilitation, and light catering for one Whatcom County community.</p></div></div>
+      <div class="giving-row"><div><p class="g-amount">$50,000</p></div><div><p class="g-title">Yakima trip + two leadership dinners + one vignette</p><p class="g-desc">Two days with the watershed coalition that figured this out, plus the intimate work that makes the big moments possible.</p></div></div>
+      <div class="giving-row"><div><p class="g-amount">$100,000</p></div><div><p class="g-title">Ecology roundtable + Common Waters 4 + three months of content</p><p class="g-desc">Funds the state roundtable facilitation, the next Common Waters gathering, and the written work holding community between events. <em>Gifts before August 1 are especially leveraged.</em></p></div></div>
+      <div class="giving-row"><div><p class="g-amount">$250,000</p></div><div><p class="g-title"><em>We Are Not Enemies</em> &mdash; the film</p><p class="g-desc">The 25&ndash;30 min documentary anchoring the fall screening campaign and becoming the defining narrative artifact of this coalition's formation.</p></div></div>
+      <div class="giving-row"><div><p class="g-amount">$500K+</p></div><div><p class="g-title">Full H2 2026 program</p><p class="g-desc">Recognition in film credits and at the flagship event. The complete second half of the project's most critical year.</p></div></div>
+    </div>
+    <div>
+      <span class="label">Who we are</span>
+      <p class="body" style="margin-bottom:12pt">The project is led by a four-person team with deep roots in Whatcom County, covering documentary production, strategic facilitation, visual art direction, and organizational development. Fiscally sponsored by Whatcom Community Foundation.</p>
+      <div class="team-grid">
+        <div class="team-member"><p class="tm-name">Aaron Straight</p><p class="tm-role">CEO / Founder &mdash; Film Direction, Community Relationships</p><p class="tm-bio">Carries the originating vision and deepest continuity with the project's relational and documentary roots. Leads film direction, shapes the story arc, and is the primary convener of key community relationships.</p></div>
+        <div class="team-member"><p class="tm-name">Jeff Bos</p><p class="tm-role">CFO &mdash; Facilitation, Event Design, Relational Architecture</p><p class="tm-bio">Leads the design and facilitation of community convenings, crafting experiences that help people connect with themselves, each other, and the places they're in. His funding for this phase is sourced independently through a separate grant.</p></div>
+        <div class="team-member"><p class="tm-name">Ethan Smith</p><p class="tm-role">COO &mdash; Strategic Foresight, Brand + Communications, Partnerships</p><p class="tm-bio">Shapes the long arc of the initiative, connects it to regional and international networks, and ensures coherence across website, brand, and external narrative.</p></div>
+        <div class="team-member"><p class="tm-name">Christopher Remmers</p><p class="tm-role">CCO &mdash; Fine Art Direction, Creative Direction, Curation</p><p class="tm-bio">Shapes the visual and conceptual language of the initiative across fine art, creative direction, and curation, ensuring artistic outputs carry coherence, depth, and resonance.</p></div>
+      </div>
+      <hr class="rule" style="margin-top:12pt">
+      <span class="label" style="margin-top:10pt;display:block">Stewardship Council (forming)</span>
+      <p class="body">An advisory body drawn from Indigenous leadership, farming, ecology, water law, philanthropy, and education &mdash; standing behind the work and helping open doors.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 8: CLOSING -->
+<div class="page closing-page no-break">
+  <p style="font-family:var(--font-sans);font-size:7pt;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem">The invitation</p>
+  <p class="closing-large">The river is not waiting.<br>Neither are we.</p>
+  <p class="lead" style="font-size:11pt;color:var(--ink-muted);max-width:44em;line-height:1.65;margin-bottom:2rem">We are looking for partners who want to support something that is already working: a project building trust across one of the hardest water conflicts in Washington State, through creative rigor and relational discipline that no agency process replicates on its own.</p>
+  <p class="body" style="max-width:44em">Whether you are a funder looking to leverage Washington's Water Future with something community-rooted, a strategic partner who can open doors, host gatherings, or connect voices that have not yet found each other &mdash; there is a place for you here.</p>
+  <hr class="rule" style="margin-top:2rem">
+  <div class="contact-block">
+    <div>
+      <span class="contact-label">To connect</span>
+      <p class="contact-val">Ethan Smith</p>
+      <p class="contact-sub">Partnerships &amp; Strategy<br>ethan@waterwars.info</p>
+    </div>
+    <div>
+      <span class="contact-label">Learn more</span>
+      <p class="contact-val">waterwars.info</p>
+      <p class="contact-sub">Fiscally sponsored by<br>Whatcom Community Foundation through 2026</p>
+    </div>
+  </div>
+  <p style="position:absolute;bottom:56pt;left:72pt;right:72pt;font-size:7pt;color:var(--ink-faint);border-top:1px solid var(--rule);padding-top:8pt">Water Wars (how to avoid) &nbsp;&middot;&nbsp; Partner Package &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; Whatcom County, Washington &nbsp;&middot;&nbsp; waterwars.info</p>
+</div>
+</body>
+</html>
